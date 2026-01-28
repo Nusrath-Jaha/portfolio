@@ -1,0 +1,257 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+  color: #1f2933;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.header nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  position: relative;
+}
+
+.header nav a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #4f46e5;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.header nav a:hover::after {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 12px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.hero .small {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 80px 80px;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #4f46e5;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border-radius: 10px;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.about img {
+  width: 350px;          /* size of the image */
+  height: 350px;         /* keep height same as width for perfect circle */
+  border-radius: 50%;     /* makes it round */
+  border: 6px solid #eef2ff;
+  box-shadow: 0 15px 30px rgba(79,70,229,0.25);
+}
+
+.about p {
+  max-width: 600px;
+  color: #4b5563;
+}
+
+.about ul {
+  margin-top: 20px;
+}
+
+.about ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.about img {
+    width: 350px;
+    border-radius: 50%; 
+    border: 6px solid #eef2ff;
+    box-shadow: 0 15px 30px rgba(79,70,229,0.25);
+    transition: transform 0.3s ease;
+  }
+  
+  .about img:hover {
+    transform: scale(1.05); /* slightly enlarges on hover */
+  }
+  
+/* ================= CARDS (Experience & Projects) ================= */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin-top: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #111827;
+}
+
+.card span {
+  display: block;
+  margin: 8px 0 15px;
+  font-size: 14px;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.card p {
+  color: #4b5563;
+}
+
+/* ================= SKILLS ================= */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.skill-grid span {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  padding: 14px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.3s;
+}
+
+.skill-grid span:hover {
+  transform: scale(1.08);
+}
+
+/* ================= CONTACT ================= */
+.contact p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.contact a {
+  color: #4f46e5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #111827;
+  color: #d1d5db;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+
+/* ================= ANIMATION ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: reveal 1s ease forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  section {
+    padding: 60px 30px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header {
+    padding: 15px 30px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
